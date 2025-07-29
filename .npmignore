@@ -1,0 +1,35 @@
+# Exclure le code source, les stories, la doc, les configs inutiles
+src/
+src/stories/
+src/lib/
+.storybook/
+*.stories.*
+*.test.*
+*.mdx
+*.css
+*.png
+*.svg
+*.jpg
+*.jpeg
+
+# Exclure les fichiers de build locaux
+dist/
+.vite/
+.next/
+out/
+coverage/
+node_modules/
+
+# Exclure les fichiers de config et d’environnement
+*.log
+*.env
+*.env.*
+tsconfig.json
+vitest.config.ts
+vitest.shims.d.ts
+postcss.config.*
+tailwind.config.*
+eslint.config.*
+next.config.*
+package-lock.json
+README.md
