@@ -5,7 +5,7 @@ import { CheckoutButton } from ".";
 
 // Configuration de base pour les stories du CheckoutButton
 const meta = {
-  title: "Components/Common/CheckoutButton",
+  title: "Common/CheckoutButton",
   component: CheckoutButton,
   parameters: {
     // Centre le composant dans le Canvas

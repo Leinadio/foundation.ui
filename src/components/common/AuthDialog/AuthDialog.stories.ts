@@ -48,7 +48,6 @@ export const Loading: Story = {
 
 export const Controlled: Story = {
   args: {
-    open: true,
     defaultTab: "login",
     isLoading: false,
   },
