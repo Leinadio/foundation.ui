@@ -60,7 +60,7 @@ export const LongTitle: Story = {
   args: {
     title: (
       <>
-        <span className="text-purple-600">Développement</span> d'applications{" "}
+        <span className="text-purple-600">Développement</span> d&apos;applications{" "}
         <span className="text-purple-600">modernes</span> avec une <span className="text-purple-600">architecture</span>{" "}
         robuste
       </>
