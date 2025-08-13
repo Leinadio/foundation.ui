@@ -3,7 +3,8 @@
   "compilerOptions": {
     "noEmit": false,
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "incremental": false
   },
   "include": ["src"]
 }

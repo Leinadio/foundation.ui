@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Youtube, MessageCircle, BookOpen, Rocket } from "lucide-react";
-
-import { Component as Footer } from "./component";
+import { Footer } from "./";
 
 const meta = {
   title: "Landing Page/Footer",

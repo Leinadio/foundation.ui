@@ -216,7 +216,7 @@ function FooterBottom({
   );
 }
 
-export function Component({ callToAction, footerLinks, socialLinks, companyInfo }: FooterProps = {}) {
+export function Footer({ callToAction, footerLinks, socialLinks, companyInfo }: FooterProps = {}) {
   return (
     <footer className="bg-background">
       <CallToActionSection callToAction={callToAction} />
