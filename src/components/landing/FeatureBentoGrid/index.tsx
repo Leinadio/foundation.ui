@@ -1,5 +1,3 @@
-"use client";
-
 import { IconClipboardCopy } from "@tabler/icons-react";
 import { IconFileBroken } from "@tabler/icons-react";
 import { IconSignature } from "@tabler/icons-react";

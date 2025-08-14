@@ -1,3 +1,5 @@
+"use client";
+
 import { Timeline } from "@/components/ui/timeline";
 import { Headline } from "@/components/common/Headline";
 import Image from "next/image";
