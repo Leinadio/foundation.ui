@@ -1,0 +1,235 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "header",
+      "type": "registry:block",
+      "title": "Header",
+      "description": "A simple header component.",
+      "registryDependencies": ["button", "badge", "navigation-menu", "sheet"],
+      "files": [
+        {
+          "path": "src/components/ui/header.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "auth-dialog",
+      "type": "registry:component",
+      "title": "Auth Dialog",
+      "description": "A simple auth dialog component.",
+      "registryDependencies": ["dialog", "tabs", "button", "input", "label", "card"],
+      "files": [
+        {
+          "path": "src/components/ui/auth-dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero",
+      "type": "registry:block",
+      "title": "Hero",
+      "description": "A simple hero component.",
+      "registryDependencies": [
+        "button",
+        "badge",
+        "http://localhost:3000/r/producthunt-badge.json",
+        "http://localhost:3000/r/icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/hero.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "producthunt-badge",
+      "type": "registry:component",
+      "title": "Product Hunt Badge",
+      "description": "A simple product hunt badge component.",
+      "files": [
+        {
+          "path": "src/components/ui/producthunt-badge.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "icons",
+      "type": "registry:component",
+      "title": "Icons",
+      "description": "A simple icons component.",
+      "files": [
+        {
+          "path": "src/components/ui/icons.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:component",
+      "title": "Timeline",
+      "description": "A simple timeline component.",
+      "files": [
+        {
+          "path": "src/components/ui/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "startup-struggles",
+      "type": "registry:block",
+      "title": "Startup Struggles",
+      "description": "A simple startup struggles component.",
+      "registryDependencies": ["http://localhost:3000/r/timeline.json", "http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/startup-struggles.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "success-path",
+      "type": "registry:block",
+      "title": "Success Path",
+      "description": "A simple success path component.",
+      "registryDependencies": ["http://localhost:3000/r/timeline.json", "http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/success-path.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "headline",
+      "type": "registry:block",
+      "title": "Headline",
+      "description": "A simple headline component.",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "src/components/ui/headline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "how-it-work",
+      "type": "registry:block",
+      "title": "How It Work",
+      "description": "A simple how it work component.",
+      "registryDependencies": ["badge", "http://localhost:3000/r/headline.json", "http://localhost:3000/r/icons.json"],
+      "files": [
+        {
+          "path": "src/components/ui/how-it-work.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "feature-bento-grid",
+      "type": "registry:block",
+      "title": "Feature Bento Grid",
+      "description": "A simple feature bento grid component.",
+      "dependencies": ["@tabler/icons-react", "framer-motion"],
+      "registryDependencies": [
+        "http://localhost:3000/r/headline.json",
+        "https://ui.aceternity.com/registry/bento-grid.json",
+        "http://localhost:3000/r/feature-section-with-hover-effects.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/feature-bento-grid.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "feature-section-with-hover-effects",
+      "type": "registry:component",
+      "title": "Feature Section With Hover Effects",
+      "description": "A simple feature section with hover effects component.",
+      "dependencies": ["@tabler/icons-react"],
+      "files": [
+        {
+          "path": "src/components/ui/feature-section-with-hover-effects.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "for-who",
+      "type": "registry:block",
+      "title": "For Who",
+      "description": "A simple for who component.",
+      "registryDependencies": ["badge", "http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/for-who.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing",
+      "type": "registry:block",
+      "title": "Pricing",
+      "description": "A simple pricing component.",
+      "registryDependencies": ["button", "card", "badge", "tabs"],
+      "files": [
+        {
+          "path": "src/components/ui/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq",
+      "type": "registry:block",
+      "title": "FAQ",
+      "description": "A simple faq component.",
+      "registryDependencies": ["accordion", "badge"],
+      "files": [
+        {
+          "path": "src/components/ui/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "showcase-blog",
+      "type": "registry:block",
+      "title": "Showcase Blog",
+      "description": "A simple showcase blog component.",
+      "registryDependencies": ["https://www.shadcnblocks.com/r/gallery4"],
+      "files": [
+        {
+          "path": "src/components/ui/showcase-blog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:block",
+      "title": "Footer",
+      "description": "A simple footer component.",
+      "registryDependencies": ["button", "badge"],
+      "files": [
+        {
+          "path": "src/components/ui/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

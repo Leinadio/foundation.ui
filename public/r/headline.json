@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "headline",
+  "type": "registry:block",
+  "title": "Headline",
+  "description": "A simple headline component.",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/headline.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { ReactNode } from \"react\";\n\ninterface HeadlineProps {\n  title: ReactNode;\n  description: string;\n  badge: {\n    text: string;\n    isBadge: boolean;\n  };\n  color?: string;\n}\n\nexport function Headline({ title, description, badge, color = \"red\" }: HeadlineProps) {\n  const displayBadge = () => {\n    if (badge.isBadge) {\n      return (\n        <Badge variant=\"outline\" className={`text-${color}-600 border-${color}-200`}>\n          {badge.text}\n        </Badge>\n      );\n    }\n    return <p className=\"text-sm lg:text-lg text-primary font-semibold uppercase\">{badge.text}</p>;\n  };\n  return (\n    <div className=\"flex flex-col items-center gap-4 text-center mb-0\">\n      {displayBadge()}\n      <h2 className=\"text-4xl md:text-6xl font-semibold text-foreground leading-tight\">{title}</h2>\n      <p className=\"text-xl md:text-2xl text-muted-foreground max-w-4xl\">{description}</p>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

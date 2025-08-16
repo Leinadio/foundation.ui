@@ -1,6 +1,6 @@
 {
   "name": "@leinad.io/foundation.ui",
-  "version": "0.1.27",
+  "version": "0.1.38",
   "private": false,
   "type": "module",
   "sideEffects": false,
@@ -11,12 +11,14 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "tsup --format esm --out-dir dist"
+    "build:lib": "tsup --format esm --out-dir dist",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
@@ -28,6 +30,7 @@
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.12",
+    "shadcn": "^2.9.3-canary.0",
     "tailwind-merge": "^3.3.1"
   },
   "peerDependencies": {

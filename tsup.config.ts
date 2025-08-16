@@ -18,11 +18,14 @@ export default defineConfig({
   sourcemap: false,
   clean: true,
   external: ["react", "react-dom", "react/jsx-runtime", /^next($|\/)/],
-  treeshake: true,
+  treeshake: false,
   minify: true,
   tsconfig: "tsconfig.build.json",
   esbuildOptions(options) {
     options.jsx = "automatic";
     options.jsxImportSource = "react";
+    options.alias = {
+      "@": "./src",
+    };
   },
 });

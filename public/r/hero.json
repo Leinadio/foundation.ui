@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero",
+  "type": "registry:block",
+  "title": "Hero",
+  "description": "A simple hero component.",
+  "registryDependencies": [
+    "button",
+    "badge",
+    "http://localhost:3000/r/producthunt-badge.json",
+    "http://localhost:3000/r/icons.json"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/hero.tsx",
+      "content": "import React from \"react\";\nimport { CircleChevronRight } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { ProductHuntBadge } from \"@/components/ui/producthunt-badge\";\nimport { Icons, Variant } from \"@/components/ui/icons\";\n\nexport interface HeroProps {\n  badge: string;\n  title: string;\n  description: string;\n  buttonText: string;\n}\n\nexport function Hero({ badge, title, description, buttonText }: HeroProps) {\n  return (\n    <section className=\"px-8 pt-24 md:pt-56 justify-center text-center flex flex-col mx-auto max-w-5xl items-center gap-5\">\n      <Badge variant=\"default\">{badge}</Badge>\n      <ProductHuntBadge />\n      <h1 className=\"text-4xl md:text-6xl font-semibold text-foreground\">{title}</h1>\n      <p className=\"text-lg text-muted-foreground max-w-3xl\">{description}</p>\n      <Button size=\"lg\">\n        {buttonText}\n        <CircleChevronRight className=\"w-4 h-4\" />\n      </Button>\n      <Icons variant={Variant.ArrowDown4} color=\"var(--primary)\" className=\"w-36 h-36 mt-6\" />\n    </section>\n  );\n}\n",
+      "type": "registry:block"
+    }
+  ]
+}
