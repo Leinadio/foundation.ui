@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { FeatureBentoGrid } from "../../ui/feature-bento-grid";
+import { FeatureBentoGrid } from "@/components/ui/feature-bento-grid";
 
 const meta = {
   title: "Landing Page/FeatureBentoGrid",

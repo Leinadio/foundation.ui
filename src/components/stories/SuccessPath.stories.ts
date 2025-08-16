@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { SuccessPath } from "../../ui/success-path";
+import { SuccessPath } from "@/components/ui/success-path";
 
 const meta = {
   title: "Landing Page/SuccessPath",

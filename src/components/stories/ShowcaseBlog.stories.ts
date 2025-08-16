@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { ShowcaseBlog } from "../../ui/showcase-blog";
+import { ShowcaseBlog } from "@/components/ui/showcase-blog";
 
 const meta = {
   title: "Landing Page/ShowcaseBlog",
@@ -16,13 +15,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    items: [],
+  },
 };
 
 export const CustomContent: Story = {
   args: {
     title: "Projets inspirants",
     description: "Découvrez des réalisations exceptionnelles qui démontrent le potentiel des technologies modernes.",
+    items: [],
   },
 };
 
@@ -126,7 +128,9 @@ export const BusinessShowcase: Story = {
 };
 
 export const Mobile: Story = {
-  args: {},
+  args: {
+    items: [],
+  },
   parameters: {
     viewport: {
       defaultViewport: "mobile1",
@@ -135,7 +139,9 @@ export const Mobile: Story = {
 };
 
 export const Tablet: Story = {
-  args: {},
+  args: {
+    items: [],
+  },
   parameters: {
     viewport: {
       defaultViewport: "tablet",

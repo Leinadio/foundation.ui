@@ -1,15 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { Component as FAQ } from "@/components/ui/faq";
+import { Faq } from "@/components/ui/faq";
 
 const meta = {
   title: "Landing Page/FAQ",
-  component: FAQ,
+  component: Faq,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FAQ>;
+} satisfies Meta<typeof Faq>;
 
 export default meta;
 

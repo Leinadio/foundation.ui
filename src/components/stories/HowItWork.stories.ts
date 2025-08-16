@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { HowItWork } from "../../ui/how-it-work";
+import { HowItWork } from "@/components/ui/how-it-work";
 
 const meta = {
   title: "Landing Page/HowItWork",

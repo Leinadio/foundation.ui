@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { StartupStruggles } from "../../ui/startup-struggles";
+import { StartupStruggles } from "@/components/ui/startup-struggles";
 
 const meta = {
   title: "Landing Page/StartupStruggles",

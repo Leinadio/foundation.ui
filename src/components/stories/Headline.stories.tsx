@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Headline } from "../ui/headline";
+import { Headline } from "@/components/ui/headline";
 
 const meta = {
   title: "Common/Headline",

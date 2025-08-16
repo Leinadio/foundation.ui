@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { Component as Pricing } from "../../ui/pricing";
+import { Pricing } from "@/components/ui/pricing";
 
 const meta = {
   title: "Landing Page/Pricing",

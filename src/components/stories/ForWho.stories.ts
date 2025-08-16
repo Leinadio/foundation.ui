@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-
-import { ForWho } from "../../ui/for-who";
+import { ForWho } from "@/components/ui/for-who";
 
 const meta = {
   title: "Landing Page/ForWho",
