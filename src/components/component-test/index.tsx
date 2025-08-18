@@ -16,14 +16,14 @@ export function ComponentTest() {
           <Button variant="outline" size="sm">
             Connexion
           </Button>
-          <Button size="sm">S&apos;inscrire</Button>
+          <Button size="sm">{"S'inscrire"}</Button>
         </Header.AuthSection>
 
         <Header.AuthSectionMobile>
           <Button variant="outline" className="w-full justify-start">
             Connexion
           </Button>
-          <Button className="w-full justify-start">S&apos;inscrire</Button>
+          <Button className="w-full justify-start">{"S'inscrire"}</Button>
         </Header.AuthSectionMobile>
       </Header>
       {/* 

@@ -40,7 +40,6 @@ interface HeaderAuthSectionMobileProps {
   children: ReactNode;
 }
 
-// Composants marqueurs pour identifier les sections
 function HeaderAuthSection({ children }: HeaderAuthSectionProps) {
   return <>{children}</>;
 }
@@ -49,7 +48,6 @@ function HeaderAuthSectionMobile({ children }: HeaderAuthSectionMobileProps) {
   return <>{children}</>;
 }
 
-// Fonction utilitaire pour extraire les enfants par type
 function getChildrenByType<T>(children: ReactNode, targetType: React.ComponentType<T>): ReactElement<T> | undefined {
   const childrenArray = Children.toArray(children);
 
@@ -69,9 +67,9 @@ function getChildrenByType<T>(children: ReactNode, targetType: React.ComponentTy
 }
 
 export function Header({ navigationLinks, children }: HeaderProps) {
-  // Extraction des sections d'authentification
   const authSection = getChildrenByType<HeaderAuthSectionProps>(children, HeaderAuthSection);
   const authSectionMobile = getChildrenByType<HeaderAuthSectionMobileProps>(children, HeaderAuthSectionMobile);
+
   return (
     <header className="top-0 left-0 right-0 z-50 transition-all duration-300 bg-background py-2">
       <div className="container max-w-6xl mx-auto px-4 lg:px-0 flex items-center justify-between transition-all duration-300 h-16">
@@ -141,6 +139,5 @@ export function Header({ navigationLinks, children }: HeaderProps) {
   );
 }
 
-// Attachement des composants enfants au composant principal
 Header.AuthSection = HeaderAuthSection;
 Header.AuthSectionMobile = HeaderAuthSectionMobile;
