@@ -38,7 +38,8 @@
         "button",
         "badge",
         "http://localhost:3000/r/producthunt-badge.json",
-        "http://localhost:3000/r/icons.json"
+        "http://localhost:3000/r/icons.json",
+        "http://localhost:3000/r/auth-dialog.json"
       ],
       "files": [
         {
