@@ -1,5 +1,5 @@
-import { HeroWithAuth } from "@/components/component-test/hero-wrapper";
+import { ComponentTest } from "@/components/component-test";
 
 export default function Home() {
-  return <HeroWithAuth badge="Test" title="Test" description="Test" buttonText="Test" />;
+  return <ComponentTest />;
 }

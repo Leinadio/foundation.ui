@@ -1,6 +1,3 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,10 +15,11 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
-import { AuthDialog } from "@/components/ui/auth-dialog";
+import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { ReactNode, ReactElement, Children, isValidElement } from "react";
+import React from "react";
 
 interface NavLink {
   id: string;
@@ -31,67 +29,52 @@ interface NavLink {
 
 export interface HeaderProps {
   navigationLinks: NavLink[];
-  isConnected: boolean;
-  dashboardUrl?: string;
-  onLogin?: (data: { email: string; password: string }) => void;
-  onRegister?: (data: { name: string; email: string; password: string; confirmPassword: string }) => void;
-  authDialogOnOpenChange?: (open: boolean) => void;
-  authDialogIsOpen?: boolean;
-  authDialogIsLoading?: boolean;
-  authDialogDefaultTab?: "login" | "register";
+  children: ReactNode;
 }
 
-export function Header({
-  navigationLinks,
-  isConnected,
-  dashboardUrl,
-  onLogin,
-  onRegister,
-  authDialogOnOpenChange,
-  authDialogIsOpen,
-  authDialogIsLoading,
-  authDialogDefaultTab,
-}: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
+interface HeaderAuthSectionProps {
+  children: ReactNode;
+}
 
-  const handleScrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (!element) {
-      return;
+interface HeaderAuthSectionMobileProps {
+  children: ReactNode;
+}
+
+// Composants marqueurs pour identifier les sections
+function HeaderAuthSection({ children }: HeaderAuthSectionProps) {
+  return <>{children}</>;
+}
+
+function HeaderAuthSectionMobile({ children }: HeaderAuthSectionMobileProps) {
+  return <>{children}</>;
+}
+
+// Fonction utilitaire pour extraire les enfants par type
+function getChildrenByType<T>(children: ReactNode, targetType: React.ComponentType<T>): ReactElement<T> | undefined {
+  const childrenArray = Children.toArray(children);
+
+  const matchingChild = childrenArray.find((child) => {
+    if (!isValidElement(child)) {
+      return false;
     }
 
-    const headerHeight = 80;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+    return child.type === targetType;
+  });
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
+  if (!matchingChild) {
+    return undefined;
+  }
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
+  return matchingChild as ReactElement<T>;
+}
 
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 10 && currentScrollY > lastScrollY);
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export function Header({ navigationLinks, children }: HeaderProps) {
+  // Extraction des sections d'authentification
+  const authSection = getChildrenByType<HeaderAuthSectionProps>(children, HeaderAuthSection);
+  const authSectionMobile = getChildrenByType<HeaderAuthSectionMobileProps>(children, HeaderAuthSectionMobile);
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
-        isScrolled ? "backdrop-blur-md border-b border-border shadow-sm py-0" : "py-2"
-      }`}
-    >
-      <div
-        className={`container max-w-6xl mx-auto px-4 lg:px-0 flex items-center justify-between transition-all duration-300 h-16`}
-      >
+    <header className="top-0 left-0 right-0 z-50 transition-all duration-300 bg-background py-2">
+      <div className="container max-w-6xl mx-auto px-4 lg:px-0 flex items-center justify-between transition-all duration-300 h-16">
         <div className="transition-transform duration-300">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -108,7 +91,7 @@ export function Header({
                 <NavigationMenuItem key={link.id}>
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "cursor-pointer", "bg-background text-foreground")}
-                    onClick={() => handleScrollToSection(link.href)}
+                    href={link.href}
                   >
                     {link.label}
                   </NavigationMenuLink>
@@ -117,24 +100,7 @@ export function Header({
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center gap-4">
-            {isConnected ? (
-              <Button variant="outline" size="sm" asChild>
-                <a href={dashboardUrl}>Dashboard</a>
-              </Button>
-            ) : (
-              <AuthDialog
-                isOpen={authDialogIsOpen}
-                defaultTab={authDialogDefaultTab}
-                isLoading={authDialogIsLoading}
-                onLogin={onLogin}
-                onRegister={onRegister}
-                onOpenChange={authDialogOnOpenChange}
-              >
-                <Button size="sm">Commencer</Button>
-              </AuthDialog>
-            )}
-          </div>
+          <div className="flex items-center gap-4">{authSection?.props.children}</div>
         </div>
 
         <div className="md:hidden ml-auto">
@@ -154,12 +120,8 @@ export function Header({
               <nav className="flex flex-col space-y-4 mt-8">
                 {navigationLinks.map((link) => (
                   <SheetClose asChild key={link.id}>
-                    <Button
-                      variant="ghost"
-                      className="justify-start text-left h-auto p-3"
-                      onClick={() => handleScrollToSection(link.href)}
-                    >
-                      {link.label}
+                    <Button variant="ghost" className="justify-start text-left h-auto p-3" asChild>
+                      <a href={link.href}>{link.label}</a>
                     </Button>
                   </SheetClose>
                 ))}
@@ -169,24 +131,7 @@ export function Header({
                 <Badge variant="secondary" className="w-fit">
                   Authentification
                 </Badge>
-                <div className="flex flex-col space-y-3">
-                  {isConnected ? (
-                    <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href={dashboardUrl}>Dashboard</a>
-                    </Button>
-                  ) : (
-                    <AuthDialog
-                      isOpen={authDialogIsOpen}
-                      defaultTab={authDialogDefaultTab}
-                      isLoading={authDialogIsLoading}
-                      onLogin={onLogin}
-                      onRegister={onRegister}
-                      onOpenChange={authDialogOnOpenChange}
-                    >
-                      <Button className="w-full justify-start">Commencer</Button>
-                    </AuthDialog>
-                  )}
-                </div>
+                <div className="flex flex-col space-y-3">{authSectionMobile?.props.children}</div>
               </div>
             </SheetContent>
           </Sheet>
@@ -195,3 +140,7 @@ export function Header({
     </header>
   );
 }
+
+// Attachement des composants enfants au composant principal
+Header.AuthSection = HeaderAuthSection;
+Header.AuthSectionMobile = HeaderAuthSectionMobile;
