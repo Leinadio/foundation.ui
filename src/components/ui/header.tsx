@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,8 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ReactNode, ReactElement, Children, isValidElement } from "react";
-import React from "react";
+import { getChildrenByType } from "@/lib/get-children-by-type";
 
 interface NavLink {
   id: string;
@@ -46,24 +46,6 @@ function HeaderAuthSection({ children }: HeaderAuthSectionProps) {
 
 function HeaderAuthSectionMobile({ children }: HeaderAuthSectionMobileProps) {
   return <>{children}</>;
-}
-
-function getChildrenByType<T>(children: ReactNode, targetType: React.ComponentType<T>): ReactElement<T> | undefined {
-  const childrenArray = Children.toArray(children);
-
-  const matchingChild = childrenArray.find((child) => {
-    if (!isValidElement(child)) {
-      return false;
-    }
-
-    return child.type === targetType;
-  });
-
-  if (!matchingChild) {
-    return undefined;
-  }
-
-  return matchingChild as ReactElement<T>;
 }
 
 export function Header({ navigationLinks, children }: HeaderProps) {

@@ -13,6 +13,10 @@
         {
           "path": "src/components/ui/header.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/lib/get-children-by-type.ts",
+          "type": "registry:lib"
         }
       ]
     },
@@ -45,6 +49,10 @@
         {
           "path": "src/components/ui/hero.tsx",
           "type": "registry:block"
+        },
+        {
+          "path": "src/lib/get-children-by-type.ts",
+          "type": "registry:lib"
         }
       ]
     },
