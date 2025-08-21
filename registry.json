@@ -239,6 +239,45 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "login-form",
+      "type": "registry:component",
+      "title": "Login Form",
+      "description": "A simple login form component.",
+      "registryDependencies": ["button", "input", "label"],
+      "files": [
+        {
+          "path": "src/components/ui/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "register-form",
+      "type": "registry:component",
+      "title": "Register Form",
+      "description": "A simple register form component.",
+      "registryDependencies": ["button", "input", "label"],
+      "files": [
+        {
+          "path": "src/components/ui/register-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "reset-password-form",
+      "type": "registry:component",
+      "title": "Reset Password Form",
+      "description": "A simple reset password form component.",
+      "registryDependencies": ["button", "input", "label"],
+      "files": [
+        {
+          "path": "src/components/ui/reset-password-form.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
