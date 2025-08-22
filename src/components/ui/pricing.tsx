@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ReactNode } from "react";
+import { Headline } from "@/components/ui/headline";
 
 export interface PricingPlan {
   name: string;
@@ -21,6 +22,7 @@ export interface PricingPlan {
 export interface PricingProps {
   title?: string | ReactNode;
   description?: string;
+  badge?: { text: string; isBadge: boolean };
   pricingPlans?: PricingPlan[];
 }
 
@@ -136,18 +138,13 @@ const defaultPricingPlans: PricingPlan[] = [
 export function Pricing({
   title = "Choisissez votre plan",
   description = "Des tarifs simples et transparents qui s'adaptent à vos besoins. Commencez gratuitement et évoluez selon votre croissance.",
+  badge = { text: "TARIFS", isBadge: false },
   pricingPlans = defaultPricingPlans,
 }: PricingProps) {
   return (
     <section>
-      <div className="mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">{title}</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{description}</p>
-        </div>
-
-        {/* Pricing Toggle with Tabs */}
+      <div className="mx-auto flex flex-col gap-8">
+        <Headline title={title} description={description} badge={badge} />
         <Tabs defaultValue="monthly" className="w-full">
           <div className="flex justify-center mb-12">
             <TabsList className="">

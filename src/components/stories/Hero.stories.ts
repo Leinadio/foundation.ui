@@ -11,7 +11,13 @@ const meta = {
   },
   // Génère automatiquement la documentation
   tags: ["autodocs"],
-  // Le Hero n'a pas de props pour le moment, donc pas d'argTypes nécessaire
+  // Définit les contrôles pour les props
+  argTypes: {
+    titleHighlight: {
+      control: "text",
+      description: "Partie du titre à mettre en évidence avec une couleur différente",
+    },
+  },
 } satisfies Meta<typeof Hero>;
 
 export default meta;
@@ -21,10 +27,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     badge: "🚀 Nouveau - Validation d'idée par IA",
-    title: "Testez votre idée de business avant de perdre du temps (ou de l'argent)",
+    title: "Testez votre idée de business avant de perdre du temps",
+    titleHighlight: "(ou de l'argent)",
     description:
       "Notre IA analyse votre idée sous tous les angles – marché, cible, problème, solution, business model – et vous fournit une validation claire, rapide et visuelle.",
-    buttonText: "Testez votre idée",
   },
 };
 
@@ -32,10 +38,10 @@ export const Default: Story = {
 export const DarkBackground: Story = {
   args: {
     badge: "🚀 Nouveau - Validation d'idée par IA",
-    title: "Testez votre idée de business avant de perdre du temps (ou de l'argent)",
+    title: "Testez votre idée de business avant de perdre du temps",
+    titleHighlight: "(ou de l'argent)",
     description:
       "Notre IA analyse votre idée sous tous les angles – marché, cible, problème, solution, business model – et vous fournit une validation claire, rapide et visuelle.",
-    buttonText: "Testez votre idée",
   },
   parameters: {
     backgrounds: {
@@ -48,10 +54,10 @@ export const DarkBackground: Story = {
 export const Mobile: Story = {
   args: {
     badge: "🚀 Nouveau - Validation d'idée par IA",
-    title: "Testez votre idée de business avant de perdre du temps (ou de l'argent)",
+    title: "Testez votre idée de business avant de perdre du temps",
+    titleHighlight: "(ou de l'argent)",
     description:
       "Notre IA analyse votre idée sous tous les angles – marché, cible, problème, solution, business model – et vous fournit une validation claire, rapide et visuelle.",
-    buttonText: "Testez votre idée",
   },
   parameters: {
     viewport: {
@@ -64,14 +70,35 @@ export const Mobile: Story = {
 export const Tablet: Story = {
   args: {
     badge: "🚀 Nouveau - Validation d'idée par IA",
-    title: "Testez votre idée de business avant de perdre du temps (ou de l'argent)",
+    title: "Testez votre idée de business avant de perdre du temps",
+    titleHighlight: "(ou de l'argent)",
     description:
       "Notre IA analyse votre idée sous tous les angles – marché, cible, problème, solution, business model – et vous fournit une validation claire, rapide et visuelle.",
-    buttonText: "Testez votre idée",
   },
   parameters: {
     viewport: {
       defaultViewport: "tablet",
     },
+  },
+};
+
+// Nouvelle story montrant l'utilisation du titleHighlight
+export const WithHighlight: Story = {
+  args: {
+    badge: "✨ Fonctionnalité",
+    title: "Créez des applications",
+    titleHighlight: "en quelques minutes",
+    description:
+      "Notre plateforme vous permet de développer rapidement des applications modernes et performantes sans compromis sur la qualité.",
+  },
+};
+
+// Story sans titleHighlight
+export const WithoutHighlight: Story = {
+  args: {
+    badge: "📱 Application",
+    title: "Interface simple et intuitive",
+    description:
+      "Une expérience utilisateur fluide et agréable pour tous vos utilisateurs, quel que soit leur niveau technique.",
   },
 };

@@ -1,5 +1,9 @@
-import { Hero } from "@/components/ui/hero";
+import { Pricing } from "../ui/pricing";
 
 export function ComponentTest() {
-  return <Hero badge="test" title="test" description="test" url="https://www.google.com" />;
+  return (
+    <div className="flex flex-col gap-4 max-w-6xl mx-auto">
+      <Pricing />
+    </div>
+  );
 }

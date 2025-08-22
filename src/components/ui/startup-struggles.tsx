@@ -21,7 +21,6 @@ export interface StartupStrugglesProps {
   title?: ReactNode;
   description?: string;
   badge?: { text: string; isBadge: boolean };
-  color?: string;
   fromColor?: string;
   viaColor?: string;
   data?: StartupStrugglesItem[];
@@ -36,9 +35,8 @@ export function StartupStruggles({
   ),
   description = "Entre la technique, le business et les deadlines... Il y a tant de choses à gérer qu'on finit par perdre de vue l'essentiel.",
   badge = { text: "RÉALITÉ DU TERRAIN", isBadge: true },
-  color = "red",
-  fromColor = "red-600",
-  viaColor = "red-900",
+  fromColor = "from-red-600",
+  viaColor = "via-red-900",
   data = [
     {
       title: "Manque de temps",
@@ -106,7 +104,7 @@ export function StartupStruggles({
   });
   return (
     <section className="flex flex-col gap-20 md:gap-24">
-      <Headline title={title} description={description} badge={badge} color={color} />
+      <Headline title={title} description={description} badge={badge} />
 
       <div className="relative w-full overflow-clip">
         <Timeline data={timelineData} fromColor={fromColor} viaColor={viaColor} />
