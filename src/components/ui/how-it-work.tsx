@@ -54,7 +54,7 @@ export interface HowItWorkStep {
 export interface HowItWorkProps {
   title?: string | ReactNode;
   description?: string;
-  badge?: { text: string; isBadge: boolean };
+  badgeText?: string;
   steps?: HowItWorkStep[];
 }
 
@@ -155,13 +155,13 @@ function buildRows(steps: HowItWorkStep[]): ReactNode[] {
 export function HowItWork({
   title = "Transformez le chaos en efficacité",
   description = "L'efficacité retrouvée avec notre plateforme",
-  badge = { text: "COMMENT ÇA MARCHE ?", isBadge: false },
+  badgeText = "COMMENT ÇA MARCHE ?",
   steps = defaultSteps,
 }: HowItWorkProps) {
   const rows = buildRows(steps);
   return (
     <section className="flex flex-col gap-8 md:gap-10">
-      <Headline title={title} description={description} badge={badge} />
+      <Headline title={title} description={description} badge={{ text: badgeText, isBadge: false }} />
       {rows}
     </section>
   );

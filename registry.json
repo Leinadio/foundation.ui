@@ -69,6 +69,19 @@
       ]
     },
     {
+      "name": "problem",
+      "type": "registry:block",
+      "title": "Problem",
+      "description": "A simple problem component.",
+      "registryDependencies": ["http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/problem.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "icons",
       "type": "registry:component",
       "title": "Icons",

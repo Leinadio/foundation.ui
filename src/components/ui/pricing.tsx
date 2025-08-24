@@ -22,7 +22,7 @@ export interface PricingPlan {
 export interface PricingProps {
   title?: string | ReactNode;
   description?: string;
-  badge?: { text: string; isBadge: boolean };
+  badgeText?: string;
   pricingPlans?: PricingPlan[];
 }
 
@@ -138,13 +138,13 @@ const defaultPricingPlans: PricingPlan[] = [
 export function Pricing({
   title = "Choisissez votre plan",
   description = "Des tarifs simples et transparents qui s'adaptent à vos besoins. Commencez gratuitement et évoluez selon votre croissance.",
-  badge = { text: "TARIFS", isBadge: false },
+  badgeText = "TARIFS",
   pricingPlans = defaultPricingPlans,
 }: PricingProps) {
   return (
     <section>
       <div className="mx-auto flex flex-col gap-8">
-        <Headline title={title} description={description} badge={badge} />
+        <Headline title={title} description={description} badge={{ text: badgeText, isBadge: false }} />
         <Tabs defaultValue="monthly" className="w-full">
           <div className="flex justify-center mb-12">
             <TabsList className="">
