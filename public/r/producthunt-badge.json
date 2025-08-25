@@ -6,9 +6,10 @@
   "description": "A simple product hunt badge component.",
   "files": [
     {
-      "path": "src/components/ui/producthunt-badge.tsx",
+      "path": "src/components/common/producthunt-badge/index.tsx",
       "content": "import Image from \"next/image\";\n\nexport function ProductHuntBadge() {\n  return (\n    <a\n      href=\"https://www.producthunt.com/posts/womi?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-womi\"\n      target=\"_blank\"\n      className=\"flex justify-center\"\n    >\n      <Image\n        src=\"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=960432&theme=light&t=1746203235854\"\n        alt={\"Womi - Test your business idea before wasting time (or money) | Product Hunt\"}\n        style={{ width: 250, height: 54 }}\n        width=\"250\"\n        height=\"54\"\n      />\n    </a>\n  );\n}\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "src/components/common/producthunt-badge/ui.tsx"
     }
   ]
 }

@@ -17,24 +17,16 @@
       ],
       "files": [
         {
-          "path": "src/components/ui/header.tsx",
-          "type": "registry:block"
+          "path": "src/blocks/landing-page/header/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/header/ui.tsx"
         },
         {
           "path": "src/lib/get-children-by-type.ts",
           "type": "registry:lib"
-        }
-      ]
-    },
-    {
-      "name": "auth-dialog",
-      "type": "registry:component",
-      "title": "Auth Dialog",
-      "description": "A simple auth dialog component.",
-      "registryDependencies": ["dialog", "tabs", "button", "input", "label", "card"],
-      "files": [
+        },
         {
-          "path": "src/components/ui/auth-dialog.tsx",
+          "path": "src/components/ui/animated-theme-toggler.tsx",
           "type": "registry:component"
         }
       ]
@@ -44,19 +36,24 @@
       "type": "registry:block",
       "title": "Hero",
       "description": "A simple hero component.",
-      "registryDependencies": [
-        "badge",
-        "http://localhost:3000/r/producthunt-badge.json",
-        "http://localhost:3000/r/icons.json"
-      ],
+      "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/components/ui/hero.tsx",
-          "type": "registry:block"
+          "path": "src/blocks/landing-page/hero/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/hero/ui.tsx"
         },
         {
           "path": "src/lib/get-children-by-type.ts",
           "type": "registry:lib"
+        },
+        {
+          "path": "src/components/shared/producthunt-badge/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/shared/icons/index.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -65,30 +62,41 @@
       "type": "registry:block",
       "title": "Hero Row",
       "description": "A simple hero row component.",
-      "registryDependencies": [
-        "badge",
-        "http://localhost:3000/r/producthunt-badge.json",
-        "http://localhost:3000/r/icons.json"
-      ],
+      "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/components/ui/hero-row.tsx",
-          "type": "registry:block"
+          "path": "src/blocks/landing-page/hero-row/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/hero-row/ui.tsx"
         },
         {
           "path": "src/lib/get-children-by-type.ts",
           "type": "registry:lib"
+        },
+        {
+          "path": "src/components/shared/producthunt-badge/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/shared/icons/index.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "producthunt-badge",
-      "type": "registry:component",
-      "title": "Product Hunt Badge",
-      "description": "A simple product hunt badge component.",
+      "name": "hero-video",
+      "type": "registry:block",
+      "title": "Hero Video",
+      "description": "A simple hero video component.",
+      "registryDependencies": ["http://localhost:3000/r/hero-video-dialog.json"],
       "files": [
         {
-          "path": "src/components/ui/producthunt-badge.tsx",
+          "path": "src/blocks/landing-page/hero-video/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/hero-video/ui.tsx"
+        },
+        {
+          "path": "src/components/ui/hero-video-dialog.tsx",
           "type": "registry:component"
         }
       ]
@@ -98,34 +106,14 @@
       "type": "registry:block",
       "title": "Problem",
       "description": "A simple problem component.",
-      "registryDependencies": ["http://localhost:3000/r/headline.json"],
       "files": [
         {
-          "path": "src/components/ui/problem.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "icons",
-      "type": "registry:component",
-      "title": "Icons",
-      "description": "A simple icons component.",
-      "files": [
+          "path": "src/blocks/landing-page/problem/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/problem/ui.tsx"
+        },
         {
-          "path": "src/components/ui/icons.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline",
-      "type": "registry:component",
-      "title": "Timeline",
-      "description": "A simple timeline component.",
-      "files": [
-        {
-          "path": "src/components/ui/timeline.tsx",
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -135,10 +123,18 @@
       "type": "registry:block",
       "title": "Startup Struggles",
       "description": "A simple startup struggles component.",
-      "registryDependencies": ["http://localhost:3000/r/timeline.json", "http://localhost:3000/r/headline.json"],
       "files": [
         {
-          "path": "src/components/ui/startup-struggles.tsx",
+          "path": "src/blocks/landing-page/startup-struggles/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/startup-struggles/ui.tsx"
+        },
+        {
+          "path": "src/components/ui/timeline.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -148,23 +144,18 @@
       "type": "registry:block",
       "title": "Success Path",
       "description": "A simple success path component.",
-      "registryDependencies": ["http://localhost:3000/r/timeline.json", "http://localhost:3000/r/headline.json"],
       "files": [
         {
-          "path": "src/components/ui/success-path.tsx",
+          "path": "src/blocks/landing-page/success-path/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/success-path/ui.tsx"
+        },
+        {
+          "path": "src/components/ui/timeline.tsx",
           "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "headline",
-      "type": "registry:block",
-      "title": "Headline",
-      "description": "A simple headline component.",
-      "registryDependencies": ["badge"],
-      "files": [
+        },
         {
-          "path": "src/components/ui/headline.tsx",
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -174,10 +165,19 @@
       "type": "registry:block",
       "title": "How It Work",
       "description": "A simple how it work component.",
-      "registryDependencies": ["badge", "http://localhost:3000/r/headline.json", "http://localhost:3000/r/icons.json"],
+      "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/components/ui/how-it-work.tsx",
+          "path": "src/blocks/landing-page/how-it-work/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/how-it-work/ui.tsx"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/shared/icons/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -189,13 +189,17 @@
       "description": "A simple feature bento grid component.",
       "dependencies": ["@tabler/icons-react", "framer-motion"],
       "registryDependencies": [
-        "http://localhost:3000/r/headline.json",
         "https://ui.aceternity.com/registry/bento-grid.json",
         "http://localhost:3000/r/feature-section-with-hover-effects.json"
       ],
       "files": [
         {
-          "path": "src/components/ui/feature-bento-grid.tsx",
+          "path": "src/blocks/landing-page/feature-bento-grid/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/feature-bento-grid/ui.tsx"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -218,10 +222,15 @@
       "type": "registry:block",
       "title": "For Who",
       "description": "A simple for who component.",
-      "registryDependencies": ["badge", "http://localhost:3000/r/headline.json"],
+      "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/components/ui/for-who.tsx",
+          "path": "src/blocks/landing-page/for-who/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/for-who/ui.tsx"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -234,8 +243,9 @@
       "registryDependencies": ["button", "card", "badge", "tabs"],
       "files": [
         {
-          "path": "src/components/ui/pricing.tsx",
-          "type": "registry:component"
+          "path": "src/blocks/landing-page/pricing/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/pricing/ui.tsx"
         }
       ]
     },
@@ -247,8 +257,9 @@
       "registryDependencies": ["accordion", "badge"],
       "files": [
         {
-          "path": "src/components/ui/faq.tsx",
-          "type": "registry:component"
+          "path": "src/blocks/landing-page/faq/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/faq/ui.tsx"
         }
       ]
     },
@@ -257,10 +268,14 @@
       "type": "registry:block",
       "title": "Showcase Blog",
       "description": "A simple showcase blog component.",
-      "registryDependencies": ["https://www.shadcnblocks.com/r/gallery4"],
       "files": [
         {
-          "path": "src/components/ui/showcase-blog.tsx",
+          "path": "src/blocks/landing-page/showcase-blog/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/showcase-blog/ui.tsx"
+        },
+        {
+          "path": "src/components/ui/gallery4.tsx",
           "type": "registry:component"
         }
       ]
@@ -273,8 +288,23 @@
       "registryDependencies": ["button", "badge"],
       "files": [
         {
-          "path": "src/components/ui/footer.tsx",
-          "type": "registry:component"
+          "path": "src/blocks/landing-page/footer/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/footer/ui.tsx"
+        }
+      ]
+    },
+    {
+      "name": "auth-dialog-form",
+      "type": "registry:component",
+      "title": "Auth Dialog",
+      "description": "A simple auth dialog component.",
+      "registryDependencies": ["dialog", "tabs", "button", "input", "label", "card"],
+      "files": [
+        {
+          "path": "src/components/auth/auth-dialog-form/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/auth/auth-dialog-form/ui.tsx"
         }
       ]
     },
@@ -286,8 +316,9 @@
       "registryDependencies": ["button", "input", "label"],
       "files": [
         {
-          "path": "src/components/ui/login-form.tsx",
-          "type": "registry:component"
+          "path": "src/components/auth/login-form/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/auth/login-form/ui.tsx"
         }
       ]
     },
@@ -299,8 +330,9 @@
       "registryDependencies": ["button", "input", "label"],
       "files": [
         {
-          "path": "src/components/ui/register-form.tsx",
-          "type": "registry:component"
+          "path": "src/components/auth/register-form/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/auth/register-form/ui.tsx"
         }
       ]
     },
@@ -312,8 +344,23 @@
       "registryDependencies": ["button", "input", "label"],
       "files": [
         {
-          "path": "src/components/ui/reset-password-form.tsx",
-          "type": "registry:component"
+          "path": "src/components/auth/reset-password-form/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/auth/reset-password-form/ui.tsx"
+        }
+      ]
+    },
+    {
+      "name": "change-password-form",
+      "type": "registry:component",
+      "title": "Change Password Form",
+      "description": "A simple change password form component.",
+      "registryDependencies": ["button", "input", "label"],
+      "files": [
+        {
+          "path": "src/components/auth/change-password-form/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/auth/change-password-form/ui.tsx"
         }
       ]
     },
@@ -322,10 +369,14 @@
       "type": "registry:block",
       "title": "Feature With Image Comparison",
       "description": "A simple feature with image comparison component.",
-      "registryDependencies": ["http://localhost:3000/r/headline.json"],
       "files": [
         {
-          "path": "src/components/ui/feature-with-image-comparison.tsx",
+          "path": "src/blocks/landing-page/feature-with-image-comparison/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/feature-with-image-comparison/ui.tsx"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
         }
       ]
@@ -335,11 +386,30 @@
       "type": "registry:block",
       "title": "With Without",
       "description": "A simple with without component.",
-      "registryDependencies": ["card", "http://localhost:3000/r/headline.json"],
+      "registryDependencies": ["card"],
       "files": [
         {
-          "path": "src/components/ui/with-without.tsx",
+          "path": "src/blocks/landing-page/with-without/index.tsx",
+          "type": "registry:block",
+          "target": "src/blocks/landing-page/with-without/ui.tsx"
+        },
+        {
+          "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkout-button",
+      "type": "registry:component",
+      "title": "Checkout Button",
+      "description": "A simple checkout button component.",
+      "registryDependencies": ["button", "card", "alert"],
+      "files": [
+        {
+          "path": "src/components/payment/checkout-button/index.tsx",
+          "type": "registry:component",
+          "target": "src/components/checkout-button/ui.tsx"
         }
       ]
     }
