@@ -8,13 +8,7 @@
       "type": "registry:block",
       "title": "Header",
       "description": "A simple header component.",
-      "registryDependencies": [
-        "button",
-        "badge",
-        "navigation-menu",
-        "sheet",
-        "https://magicui.design/r/animated-theme-toggler"
-      ],
+      "registryDependencies": ["button", "badge", "navigation-menu", "sheet"],
       "files": [
         {
           "path": "src/blocks/landing-page/header/index.tsx",
