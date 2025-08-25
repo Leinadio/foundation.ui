@@ -8,7 +8,13 @@
       "type": "registry:block",
       "title": "Header",
       "description": "A simple header component.",
-      "registryDependencies": ["button", "badge", "navigation-menu", "sheet"],
+      "registryDependencies": [
+        "button",
+        "badge",
+        "navigation-menu",
+        "sheet",
+        "https://magicui.design/r/animated-theme-toggler"
+      ],
       "files": [
         {
           "path": "src/components/ui/header.tsx",
@@ -39,15 +45,34 @@
       "title": "Hero",
       "description": "A simple hero component.",
       "registryDependencies": [
-        "button",
         "badge",
         "http://localhost:3000/r/producthunt-badge.json",
-        "http://localhost:3000/r/icons.json",
-        "http://localhost:3000/r/auth-dialog.json"
+        "http://localhost:3000/r/icons.json"
       ],
       "files": [
         {
           "path": "src/components/ui/hero.tsx",
+          "type": "registry:block"
+        },
+        {
+          "path": "src/lib/get-children-by-type.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "hero-row",
+      "type": "registry:block",
+      "title": "Hero Row",
+      "description": "A simple hero row component.",
+      "registryDependencies": [
+        "badge",
+        "http://localhost:3000/r/producthunt-badge.json",
+        "http://localhost:3000/r/icons.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/hero-row.tsx",
           "type": "registry:block"
         },
         {

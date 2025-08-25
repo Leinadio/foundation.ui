@@ -6,20 +6,13 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getChildrenByType } from "@/lib/get-children-by-type";
+import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
 
 interface NavLink {
   id: string;
@@ -77,8 +70,11 @@ export function Header({ navigationLinks, children }: HeaderProps) {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
+              <AnimatedThemeToggler />
             </NavigationMenuList>
           </NavigationMenu>
+
+          <AnimatedThemeToggler />
 
           <div className="flex items-center gap-4">{authSection?.props.children}</div>
         </div>
@@ -92,10 +88,10 @@ export function Header({ navigationLinks, children }: HeaderProps) {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
+              {/* <SheetHeader>
                 <SheetTitle className="text-left">Navigation</SheetTitle>
                 <SheetDescription className="text-left">Accédez rapidement aux différentes sections</SheetDescription>
-              </SheetHeader>
+              </SheetHeader> */}
 
               <nav className="flex flex-col space-y-4 mt-8">
                 {navigationLinks.map((link) => (
