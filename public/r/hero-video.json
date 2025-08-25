@@ -4,9 +4,6 @@
   "type": "registry:block",
   "title": "Hero Video",
   "description": "A simple hero video component.",
-  "registryDependencies": [
-    "http://localhost:3000/r/hero-video-dialog.json"
-  ],
   "files": [
     {
       "path": "src/blocks/landing-page/hero-video/index.tsx",
