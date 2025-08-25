@@ -316,6 +316,32 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "feature-with-image-comparison",
+      "type": "registry:block",
+      "title": "Feature With Image Comparison",
+      "description": "A simple feature with image comparison component.",
+      "registryDependencies": ["http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/feature-with-image-comparison.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "with-without",
+      "type": "registry:block",
+      "title": "With Without",
+      "description": "A simple with without component.",
+      "registryDependencies": ["card", "http://localhost:3000/r/headline.json"],
+      "files": [
+        {
+          "path": "src/components/ui/with-without.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
