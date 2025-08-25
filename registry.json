@@ -88,7 +88,6 @@
       "type": "registry:block",
       "title": "Hero Video",
       "description": "A simple hero video component.",
-      "registryDependencies": ["http://localhost:3000/r/hero-video-dialog.json"],
       "files": [
         {
           "path": "src/blocks/landing-page/hero-video/index.tsx",
@@ -188,10 +187,7 @@
       "title": "Feature Bento Grid",
       "description": "A simple feature bento grid component.",
       "dependencies": ["@tabler/icons-react", "framer-motion"],
-      "registryDependencies": [
-        "https://ui.aceternity.com/registry/bento-grid.json",
-        "http://localhost:3000/r/feature-section-with-hover-effects.json"
-      ],
+      "registryDependencies": ["https://ui.aceternity.com/registry/bento-grid.json"],
       "files": [
         {
           "path": "src/blocks/landing-page/feature-bento-grid/index.tsx",
@@ -201,16 +197,7 @@
         {
           "path": "src/components/shared/headline/index.tsx",
           "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "feature-section-with-hover-effects",
-      "type": "registry:component",
-      "title": "Feature Section With Hover Effects",
-      "description": "A simple feature section with hover effects component.",
-      "dependencies": ["@tabler/icons-react"],
-      "files": [
+        },
         {
           "path": "src/components/ui/feature-section-with-hover-effects.tsx",
           "type": "registry:component"
