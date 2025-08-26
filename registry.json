@@ -390,7 +390,7 @@
         {
           "path": "src/components/payment/checkout-button/index.tsx",
           "type": "registry:component",
-          "target": "src/components/checkout-button/ui.tsx"
+          "target": "src/components/payment/checkout-button/ui.tsx"
         }
       ]
     }
