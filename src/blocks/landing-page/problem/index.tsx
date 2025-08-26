@@ -11,7 +11,7 @@ export interface ProblemProps {
   steps?: ProblemStep[];
   title: string | ReactNode;
   description: string;
-  badge: { text: string; isBadge: boolean };
+  badgeText: string;
 }
 
 const defaultSteps: ProblemStep[] = [
@@ -59,10 +59,10 @@ function Arrow() {
   );
 }
 
-export function Problem({ title, description, badge, steps = defaultSteps }: ProblemProps) {
+export function Problem({ title, description, badgeText, steps = defaultSteps }: ProblemProps) {
   return (
     <div className="flex flex-col gap-20 bg-muted py-20">
-      <Headline title={title} description={description} badge={{ text: badge.text, isBadge: badge.isBadge }} />
+      <Headline title={title} description={description} badge={{ text: badgeText, isBadge: false }} />
       <div className="py-8 rounded-xl flex flex-col md:flex-row items-center justify-center">
         {steps.map((step, index) => (
           <div key={`step-${index}`} className="flex flex-col md:flex-row items-center">
