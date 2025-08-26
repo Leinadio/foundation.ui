@@ -176,7 +176,7 @@
       ]
     },
     {
-      "name": "feature-bento-grid",
+      "name": "bento-grid",
       "type": "registry:block",
       "title": "Feature Bento Grid",
       "description": "A simple feature bento grid component.",
@@ -184,9 +184,9 @@
       "registryDependencies": ["https://ui.aceternity.com/registry/bento-grid.json"],
       "files": [
         {
-          "path": "src/blocks/landing-page/feature-bento-grid/index.tsx",
+          "path": "src/blocks/landing-page/bento-grid/index.tsx",
           "type": "registry:block",
-          "target": "src/blocks/landing-page/feature-bento-grid/ui.tsx"
+          "target": "src/blocks/landing-page/bento-grid/ui.tsx"
         },
         {
           "path": "src/components/shared/headline/index.tsx",
@@ -346,15 +346,15 @@
       ]
     },
     {
-      "name": "feature-with-image-comparison",
+      "name": "image-comparison",
       "type": "registry:block",
       "title": "Feature With Image Comparison",
       "description": "A simple feature with image comparison component.",
       "files": [
         {
-          "path": "src/blocks/landing-page/feature-with-image-comparison/index.tsx",
+          "path": "src/blocks/landing-page/image-comparison/index.tsx",
           "type": "registry:block",
-          "target": "src/blocks/landing-page/feature-with-image-comparison/ui.tsx"
+          "target": "src/blocks/landing-page/image-comparison/ui.tsx"
         },
         {
           "path": "src/components/shared/headline/index.tsx",
