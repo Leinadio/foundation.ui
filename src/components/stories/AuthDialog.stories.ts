@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { AuthDialog } from "@/components/ui/auth-dialog";
+import { AuthDialogForm } from "@/components/auth/auth-dialog-form";
 
 const meta = {
   title: "Components/AuthDialog",
-  component: AuthDialog,
+  component: AuthDialogForm,
   parameters: {
     layout: "centered",
   },
@@ -17,7 +17,7 @@ const meta = {
       control: { type: "boolean" },
     },
   },
-} satisfies Meta<typeof AuthDialog>;
+} satisfies Meta<typeof AuthDialogForm>;
 
 export default meta;
 

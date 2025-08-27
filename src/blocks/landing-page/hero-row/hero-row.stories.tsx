@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { HeroRow } from "@/components/ui/hero-row";
+import { HeroRow } from "@/blocks/landing-page/hero-row";
 import { Button } from "@/components/ui/button";
-import { Icons, Variant } from "@/components/ui/icons";
+import { Icons, Variant } from "@/components/shared/icons";
 
 const meta = {
   title: "Landing Page/HeroRow",

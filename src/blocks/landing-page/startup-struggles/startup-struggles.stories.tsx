@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { StartupStruggles } from "@/components/ui/startup-struggles";
+import { StartupStruggles } from "@/blocks/landing-page/startup-struggles";
 
 const meta = {
   title: "Landing Page/StartupStruggles",
@@ -9,10 +9,6 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    color: {
-      control: "select",
-      options: ["red", "blue", "green", "purple", "orange"],
-    },
     fromColor: {
       control: "select",
       options: ["red-600", "blue-600", "green-600", "purple-600", "orange-600"],
@@ -38,7 +34,6 @@ export const Default: Story = {
     description:
       "Entre la technique, le business et les deadlines... Il y a tant de choses à gérer qu'on finit par perdre de vue l'essentiel.",
     badge: { text: "RÉALITÉ DU TERRAIN", isBadge: true },
-    color: "red",
     fromColor: "red-600",
     viaColor: "red-900",
   },
@@ -53,7 +48,6 @@ export const WithCustomColors: Story = {
     ),
     description: "Découvrez comment notre approche révolutionne le développement d'applications.",
     badge: { text: "NOUVELLE APPROCHE", isBadge: true },
-    color: "blue",
     fromColor: "blue-600",
     viaColor: "blue-900",
   },
@@ -64,7 +58,6 @@ export const WithCustomData: Story = {
     title: "Défis du développement moderne",
     description: "Les développeurs font face à de nombreux défis dans la création d'applications modernes.",
     badge: { text: "DÉVELOPPEMENT", isBadge: true },
-    color: "green",
     fromColor: "green-600",
     viaColor: "green-900",
     data: [
@@ -119,7 +112,6 @@ export const Minimal: Story = {
     title: "Titre simple",
     description: "Description simple sans badge.",
     badge: { text: "TEXTE SIMPLE", isBadge: false },
-    color: "purple",
     fromColor: "purple-600",
     viaColor: "purple-900",
     data: [

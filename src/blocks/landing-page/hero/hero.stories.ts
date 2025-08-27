@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Hero } from "@/components/ui/hero";
+import { Hero } from "@/blocks/landing-page/hero";
 
 // Configuration de base pour les stories du Hero
 const meta = {

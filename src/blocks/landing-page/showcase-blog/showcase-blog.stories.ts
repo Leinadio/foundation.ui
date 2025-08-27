@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ShowcaseBlog } from "@/components/ui/showcase-blog";
+import { ShowcaseBlog } from "@/blocks/landing-page/showcase-blog";
 
 const meta = {
   title: "Landing Page/ShowcaseBlog",

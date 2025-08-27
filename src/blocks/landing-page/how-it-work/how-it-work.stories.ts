@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { HowItWork } from "@/components/ui/how-it-work";
+import { HowItWork } from "@/blocks/landing-page/how-it-work";
 
 const meta = {
   title: "Landing Page/HowItWork",
@@ -22,7 +22,7 @@ export const CustomContent: Story = {
   args: {
     title: "Comment ça marche — en 3 étapes simples",
     description: "L'IA vous aide à clarifier votre idée, analyser votre marché et structurer un plan d'action concret.",
-    badge: { text: "GUIDE", isBadge: true },
+    badgeText: "GUIDE",
   },
 };
 
@@ -30,7 +30,7 @@ export const TwoSteps: Story = {
   args: {
     title: "Deux étapes pour démarrer",
     description: "Commencez vite, avancez mieux.",
-    badge: { text: "RAPIDE", isBadge: false },
+    badgeText: "RAPIDE",
     steps: [
       {
         step: "Étape 1",
@@ -56,7 +56,7 @@ export const AlternateLayouts: Story = {
   args: {
     title: "Mise en page alternée",
     description: "Une alternance visuelle pour une lecture fluide.",
-    badge: { text: "ALTERNANCE", isBadge: true },
+    badgeText: "ALTERNANCE",
     steps: [
       {
         step: "Étape 1",

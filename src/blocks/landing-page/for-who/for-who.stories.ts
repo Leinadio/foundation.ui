@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ForWho } from "@/components/ui/for-who";
+import { ForWho } from "@/blocks/landing-page/for-who";
 
 const meta = {
   title: "Landing Page/ForWho",
@@ -23,7 +23,7 @@ export const CustomContent: Story = {
     title: "Adapté à tous les types d&apos;entreprises",
     description:
       "Une solution flexible qui s&apos;adapte à vos besoins spécifiques, quelle que soit la taille de votre organisation.",
-    badge: { text: "ADAPTABLE", isBadge: true },
+    badgeText: "ADAPTABLE",
   },
 };
 
@@ -31,7 +31,7 @@ export const DifferentCompanySizes: Story = {
   args: {
     title: "Solutions sur mesure",
     description: "Chaque entreprise a des besoins uniques. Nous nous adaptons.",
-    badge: { text: "SUR MESURE", isBadge: false },
+    badgeText: "SUR MESURE",
     companySizes: [
       {
         id: "enterprises",
@@ -65,7 +65,7 @@ export const MinimalContent: Story = {
   args: {
     title: "Simple et efficace",
     description: "Une approche minimaliste pour des résultats maximaux.",
-    badge: { text: "MINIMAL", isBadge: false },
+    badgeText: "MINIMAL",
     companySizes: [
       {
         id: "startups",

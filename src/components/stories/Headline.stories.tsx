@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Headline } from "@/components/ui/headline";
+import { Headline } from "@/components/shared/headline";
 
 const meta = {
   title: "Common/Headline",
@@ -8,12 +8,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    color: {
-      control: "select",
-      options: ["red", "blue", "green", "purple", "orange"],
-    },
-  },
 } satisfies Meta<typeof Headline>;
 
 export default meta;
@@ -30,7 +24,6 @@ export const Default: Story = {
     description:
       "Entre la technique, le business et les deadlines... Il y a tant de choses à gérer qu'on finit par perdre de vue l'essentiel.",
     badge: { text: "RÉALITÉ DU TERRAIN", isBadge: true },
-    color: "red",
   },
 };
 
@@ -43,7 +36,6 @@ export const WithCustomColor: Story = {
     ),
     description: "Découvrez comment notre approche révolutionne le développement d'applications.",
     badge: { text: "NOUVELLE APPROCHE", isBadge: true },
-    color: "blue",
   },
 };
 
@@ -52,7 +44,6 @@ export const WithoutBadge: Story = {
     title: "Titre simple sans badge",
     description: "Une description simple pour un titre sans badge.",
     badge: { text: "TEXTE SIMPLE", isBadge: false },
-    color: "green",
   },
 };
 
@@ -67,6 +58,5 @@ export const LongTitle: Story = {
     ),
     description: "Une approche complète pour construire des applications évolutives et maintenables.",
     badge: { text: "ARCHITECTURE", isBadge: true },
-    color: "purple",
   },
 };

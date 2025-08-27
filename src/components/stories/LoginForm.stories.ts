@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { LoginForm } from "@/components/ui/login-form";
+import { LoginForm } from "@/components/auth/login-form";
 
 const meta = {
   title: "Forms/LoginForm",
