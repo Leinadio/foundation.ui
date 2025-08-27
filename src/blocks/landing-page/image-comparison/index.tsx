@@ -5,7 +5,7 @@ import Image from "next/image";
 import { GripVertical } from "lucide-react";
 import { Headline } from "@/components/shared/headline";
 
-function Feature() {
+export function ImageComparison() {
   const [inset, setInset] = useState<number>(50);
   const [onMouseDown, setOnMouseDown] = useState<boolean>(false);
 
@@ -90,5 +90,3 @@ function Feature() {
     </div>
   );
 }
-
-export { Feature };
