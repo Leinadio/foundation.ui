@@ -3,7 +3,7 @@ import { SuccessPath } from "@/blocks/landing-page/success-path";
 import { CheckCircle, Users, Zap, TrendingUp } from "lucide-react";
 
 const meta = {
-  title: "Landing Page/SuccessPath",
+  title: "Blocks/Landing Page/SuccessPath",
   component: SuccessPath,
   parameters: {
     layout: "fullscreen",

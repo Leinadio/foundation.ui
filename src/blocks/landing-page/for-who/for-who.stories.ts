@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ForWho } from "@/blocks/landing-page/for-who";
 
 const meta = {
-  title: "Landing Page/ForWho",
+  title: "Blocks/Landing Page/ForWho",
   component: ForWho,
   parameters: {
     layout: "fullscreen",

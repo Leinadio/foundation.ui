@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { RegisterForm } from "@/components/auth/register-form";
 
 const meta = {
-  title: "Forms/RegisterForm",
+  title: "Components/Auth/RegisterForm",
   component: RegisterForm,
   parameters: {
     layout: "centered",

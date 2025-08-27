@@ -3,7 +3,7 @@ import { Youtube, MessageCircle, BookOpen, Rocket } from "lucide-react";
 import { Footer } from "@/blocks/landing-page/footer";
 
 const meta = {
-  title: "Landing Page/Footer",
+  title: "Blocks/Landing Page/Footer",
   component: Footer,
   parameters: {
     layout: "fullscreen",

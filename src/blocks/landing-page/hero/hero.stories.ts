@@ -3,7 +3,7 @@ import { Hero } from "@/blocks/landing-page/hero";
 
 // Configuration de base pour les stories du Hero
 const meta = {
-  title: "Landing Page/Hero",
+  title: "Blocks/Landing Page/Hero",
   component: Hero,
   parameters: {
     // Utilise le layout par défaut car Hero est un composant pleine largeur

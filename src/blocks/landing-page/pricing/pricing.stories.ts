@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Pricing } from "@/blocks/landing-page/pricing";
 
 const meta = {
-  title: "Landing Page/Pricing",
+  title: "Blocks/Landing Page/Pricing",
   component: Pricing,
   parameters: {
     layout: "fullscreen",

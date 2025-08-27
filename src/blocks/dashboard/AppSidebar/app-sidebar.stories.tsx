@@ -26,7 +26,7 @@ const AppSidebarWithProvider: React.FC = () => (
 );
 
 const meta = {
-  title: "Dashboard/AppSidebar",
+  title: "Blocks/Dashboard/AppSidebar",
   component: AppSidebarWithProvider,
   parameters: {
     layout: "fullscreen",

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Icons, Variant } from "@/components/shared/icons";
 
 const meta = {
-  title: "Landing Page/HeroRow",
+  title: "Blocks/Landing Page/HeroRow",
   component: HeroRow,
   parameters: {
     layout: "fullscreen",

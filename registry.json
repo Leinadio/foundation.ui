@@ -112,27 +112,6 @@
       ]
     },
     {
-      "name": "startup-struggles",
-      "type": "registry:block",
-      "title": "Startup Struggles",
-      "description": "A simple startup struggles component.",
-      "files": [
-        {
-          "path": "src/blocks/landing-page/startup-struggles/index.tsx",
-          "type": "registry:block",
-          "target": "src/blocks/landing-page/startup-struggles/ui.tsx"
-        },
-        {
-          "path": "src/components/ui/timeline.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/components/shared/headline/index.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "success-path",
       "type": "registry:block",
       "title": "Success Path",

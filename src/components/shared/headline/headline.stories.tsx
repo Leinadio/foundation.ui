@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Headline } from "@/components/shared/headline";
 
 const meta = {
-  title: "Common/Headline",
+  title: "Components/Shared/Headline",
   component: Headline,
   parameters: {
     layout: "centered",

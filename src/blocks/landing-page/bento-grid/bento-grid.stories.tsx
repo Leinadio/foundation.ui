@@ -16,7 +16,7 @@ import {
 } from "@tabler/icons-react";
 
 const meta: Meta<typeof FeatureBentoGrid> = {
-  title: "Landing Page/FeatureBentoGrid",
+  title: "Blocks/Landing Page/FeatureBentoGrid",
   component: FeatureBentoGrid,
   parameters: {
     layout: "fullscreen",
